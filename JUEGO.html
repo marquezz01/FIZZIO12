@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Letras - Aprende Español</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menú de Inicio -->
+<div id="menu" class="menu-container">
+  <div class="game-menu">
+    <!-- Imagen centrada arriba -->
+    <div class="menu-image">
+      <img src="images/logofi2.png" alt="Imagen del Juego" class="center-image">
+    </div>
+
+    <h1 class="menu-title">¡Bienvenido al Juego de Letras!</h1>
+    <p class="menu-description">
+      Aprende sobre letras altas, bajas y medianas mientras emparejas palabras con sus imágenes.
+    </p>
+    <button id="start-game" class="start-button">Iniciar Juego</button>
+  </div>
+</div>
+
+<style>
+  /* Estilos para centrar la imagen */
+  .menu-image {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre la imagen y el título */
+  }
+
+  .center-image {
+    max-width: 210px; /* Limita el tamaño de la imagen a 210px de ancho */
+    height: auto;
+  }
+</style>
+
+   
+  </div>
+
+  <!-- Juego de Emparejar Palabras e Imágenes -->
+  <div id="game" class="container" style="display: none;">
+    <h1>¡Empareja la palabra con la imagen correcta!</h1>
+    <div id="word"></div>
+    <p id="letter-info"></p>
+    
+    <div class="images">
+      <img src="images/conejoalto.png" alt="A" data-word="A" class="game-img">
+      <img src="images/conejobajo.png" alt="B" data-word="B" class="game-img">
+      <img src="images/conejomedio.png" alt="e" data-word="e" class="game-img">
+    
+    </div>
+    
+    <div id="result"></div>
+    <button id="next">Siguiente palabra</button>
+  </div>
+
+  <audio id="correct-sound" src="correct.mp3"></audio>
+  <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
